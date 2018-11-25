@@ -106,7 +106,7 @@
 <br>
            <div class="row">
 
-@foreach ($sejarah as $value)
+@foreach ($sejarah as $index => $value)
              <div class="col s4">
                <img class="materialboxed" width="500" height="400" src="{{asset('storage/'.$value->foto_sejarah)}}">
              </div>

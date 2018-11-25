@@ -8,21 +8,21 @@
         <li>
           <img src="img/budaya1.jpg"> <!-- random image -->
           <div class="caption center-align">
-            <h3>LESTARI BANYUMAS</h3>
+            <h3>BUDAYA KITA</h3>
             <h5 class="light grey-text text-lighten-3">Support Your Local Wisdom</h5>
           </div>
         </li>
         <li>
           <img src="img/budaya4.jpg"> <!-- random image -->
           <div class="caption right-align">
-            <h3>LESTARI BANYUMAS</h3>
+            <h3>BUDAYA KITA</h3>
             <h5 class="light grey-text text-lighten-3">Support Your Local Wisdom</h5>
           </div>
         </li>
         <li>
           <img src="img/budaya3.jpg"> <!-- random image -->
           <div class="caption left-align">
-            <h3>LESTARI BANYUMAS</h3>
+            <h3>BUDAYA KITA</h3>
             <h5 class="light grey-text text-lighten-3">Support Your Local Wisdom</h5>
           </div>
 

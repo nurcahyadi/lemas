@@ -27,9 +27,9 @@ class SejarahController extends Controller
     }
 
 
-    public function indexdetailsejarah()
+    public function indexdetailsejarah($id)
     {
-      $sejarah = Sejarah::all();
+      $sejarah = Sejarah::where('id','=',$id)->get();
       // dd($article);
       return view('viewuser.detailsejarah')->with('sejarah',$sejarah);
     }

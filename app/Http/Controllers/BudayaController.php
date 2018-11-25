@@ -42,24 +42,7 @@ class BudayaController extends Controller
       // dd($article);
       return view('viewuser.macambatik',['budaya'=>$budaya]);
     }
-    public function indexdetailtarian()
-    {
-      $budaya = Budaya::where('type_budaya','=','Tarian')->get();
-      // dd($article);
-      return view('viewuser.detailtarian',['budaya'=>$budaya]);
-    }
-    public function indexdetailmakanan()
-    {
-      $budaya = Budaya::where('type_budaya','=','Makanan')->get();
-      // dd($article);
-      return view('viewuser.detailmakanan',['budaya'=>$budaya]);
-    }
-    public function indexdetailbatik()
-    {
-      $budaya = Budaya::where('type_budaya','=','Batik')->get();
-      // dd($article);
-      return view('viewuser.detailbatik',['budaya'=>$budaya]);
-    }
+
 
 
     /**
@@ -164,5 +147,35 @@ class BudayaController extends Controller
     $delete = $budaya->delete();
     // return redirect('/homeadmin');
     return redirect('/homeadminbudaya');
+    }
+
+    public function tarianById($id){
+      $tarian = Budaya::where([
+        ['type_budaya', '=','Tarian'],
+        ['id','=',$id]
+      ])->get();
+
+      return view('viewuser.detailtarian',['tarian'=>$tarian]);
+
+    }
+
+    public function makananById($id){
+      $makanan = Budaya::where([
+        ['type_budaya', '=','Makanan'],
+        ['id','=',$id]
+      ])->get();
+
+      return view('viewuser.detailmakanan',['makanan'=>$makanan]);
+
+    }
+
+    public function batikById($id){
+      $batik = Budaya::where([
+        ['type_budaya', '=','Batik'],
+        ['id','=',$id]
+      ])->get();
+
+      return view('viewuser.detailbatik',['batik'=>$batik]);
+
     }
 }

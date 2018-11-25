@@ -28,9 +28,9 @@ class UmkmController extends Controller
       }
 
 
-      public function indexdetailumkm()
+      public function indexdetailumkm($id)
       {
-        $umkm = umkm::all();
+        $umkm = umkm::where('id','=',$id)->get();
         // dd($article);
         return view('viewuser.detailumkm',['umkm'=>$umkm]);
       }

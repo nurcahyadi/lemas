@@ -15,7 +15,7 @@
         <li>
           <img src="img/budaya4.jpg"> <!-- random image -->
           <div class="caption right-align">
-            <h3>LESTARI BANYUMAS</h3>
+            <h3>BUDAYA KITA</h3>
             <h5 class="light grey-text text-lighten-3">Support Your Local Wisdom</h5>
           </div>
         </li>
@@ -42,7 +42,7 @@
         </div>
         <div class="card-content">
           <span class="card-title activator grey-text text-darken-4">{{$value->nama_budaya}}<i class="material-icons right">more_vert</i></span>
-          <p><a href="{{route('detailbatikuser')}}">Read More</a></p>
+          <p><a href="{{route('batik.byId',['id'=>$value->id])}}">Read More</a></p>
         </div>
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4">{{$value->nama_budaya}}<i class="material-icons right">close</i></span>

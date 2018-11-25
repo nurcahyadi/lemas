@@ -20,6 +20,8 @@ class WisataController extends Controller
       return view('viewadmin.wisata.homewisata',['wisata'=>$wisata]);
     }
 
+    
+
     /**
      * Show the form for creating a new resource.
      *

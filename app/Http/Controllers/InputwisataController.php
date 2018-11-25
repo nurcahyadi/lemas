@@ -130,4 +130,10 @@ class InputwisataController extends Controller
         // dd($pemain);
         return view('viewuser.tampilanwisata')->with('datainputwisata',$datainputwisata);
     }
+    
+    public function detailwisata($id){
+      $wisata = inputwisata::where('id','=', $id)->get();
+
+      return view('viewuser.detailtampilanwisata')->with('wisata',$wisata);
+    }
 }

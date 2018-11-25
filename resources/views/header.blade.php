@@ -8,7 +8,7 @@
 
   <nav>
     <div class="nav-wrapper brown lighten-1">
-      <a href="#" class="brand-logo" style="margin-left:10px;"> LEMAS </a>
+      <a href="#" class="brand-logo" style="margin-left:10px;"> BUDAYA KITA </a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="{{route("home")}}"><i class="material-icons left">home</i>Beranda</a></li>
         <li><a href="{{route('budayauser')}}"><i class="material-icons left">folder_shared</i>Budaya</a></li>

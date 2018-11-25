@@ -23,24 +23,23 @@ Route::get('auth/{provider}/callback', 'Auth\AuthController@handleProviderCallba
 
 Route::get('/budaya', 'BudayaController@indexviewuser')->name('budayauser');
 Route::get('/tarian', 'BudayaController@indextarian')->name('tarian');
-Route::get('/detailtarianuser', 'BudayaController@indexdetailtarian')->name('detailtarianuser');
+Route::get('/tarian/{id}', 'BudayaController@tarianById')->name('tarian.byId');
+
 Route::get('/makanan', 'BudayaController@indexmakanan')->name('makanan');
-Route::get('/detailmakananuser', 'BudayaController@indexdetailmakanan')->name('detailmakananuser');
+Route::get('/makanan/{id}', 'BudayaController@makananById')->name('makanan.byId');
+
 Route::get('/batik', 'BudayaController@indexbatik')->name('batik');
-Route::get('/detailbatikuser', 'BudayaController@indexdetailbatik')->name('detailbatikuser');
+Route::get('/batik/{id}', 'BudayaController@batikById')->name('batik.byId');
 
 Route::get('/sejarah', 'SejarahController@indexviewuser')->name('sejarahuser');
-Route::get('/detailsejarahuser', 'SejarahController@indexdetailsejarah')->name('detailsejarahuser');
+Route::get('/sejarah/{id}', 'SejarahController@indexdetailsejarah')->name('detailsejarahuser');
 
 Route::get('/umkm', 'UmkmController@indexviewuser')->name('umkmuser');
-Route::get('/detailumkmuser', 'UmkmController@indexdetailumkm')->name('detailumkmuser');
-
+Route::get('/umkm/{id}', 'UmkmController@indexdetailumkm')->name('detailumkmuser');
+//tampilan di user
 Route::get('/wisata', 'InputwisataController@datainputwisata')->name('datainputwisata');
-
-
-
-
 Route::get('/inputwisata', 'InputwisataController@indexuser')->name('inputwisata');
+Route::get('/wisata/{id}', 'InputwisataController@detailwisata')->name('detailwisatauser');
 
 
 Route::get('/homeadminbudaya','BudayaController@index')->name('homeadminbudaya');
@@ -50,6 +49,7 @@ Route::get('/budayashow/{id}','BudayaController@show')->name('detailbudaya');
 Route::get('/editbudaya/{id}','BudayaController@edit')->name('editbudaya');
 Route::post('/updatebudaya/{id}','BudayaController@update')->name('updatebudaya');
 Route::delete('/deletebudaya/{id}','BudayaController@destroy')->name('deletebudaya');
+
 
 
 
@@ -84,6 +84,7 @@ Route::delete('/deletesejarah/{id}','SejarahController@destroy')->name('deletese
 
 Route::get('/homeadmininputwisata','InputwisataController@index')->name('homeadmininputwisata');
 // Route::get('/tosejarah','SejarahController@create');
+
 Route::post('/createinputwisata','InputwisataController@store')->name('createinputwisata');
 Route::get('/inputwisatashow/{id}','InputwisataController@show')->name('detailinputwisata');
 // Route::get('/editsejarah/{id}','SejarahController@edit')->name('editsejarah');

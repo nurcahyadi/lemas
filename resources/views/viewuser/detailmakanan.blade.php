@@ -79,7 +79,7 @@
 
            <div class="row article-row">
 
-               @foreach ($budaya as $index => $value)
+               @foreach ($makanan as $index => $value)
                <div class="col s12 article-card">
                    <div class="col s4 offset-s7 article-card-left-name">
                        <p class="article-name">Banyumas, Jawa Tengah</p>

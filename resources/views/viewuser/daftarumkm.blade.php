@@ -38,11 +38,11 @@
       <div class="col s3">
         <div class="card">
         <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="img/budaya9.jpg">
+          <img class="activator" src="{{asset('storage/'.$value->foto_umkm)}}" style="width:320px; height:300px;">
         </div>
         <div class="card-content">
           <span class="card-title activator grey-text text-darken-4">{{$value->nama_umkm}}<i class="material-icons right">more_vert</i></span>
-          <p><a href="{{route('detailumkmuser')}}">Read More</a></p>
+          <p><a href="{{route('detailumkmuser',['id'=>$value->id])}}">Read More</a></p>
         </div>
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4">{{$value->nama_umkm}}<i class="material-icons right">close</i></span>
