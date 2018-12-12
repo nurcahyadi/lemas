@@ -178,4 +178,6 @@ class BudayaController extends Controller
       return view('viewuser.detailbatik',['batik'=>$batik]);
 
     }
+
+    
 }

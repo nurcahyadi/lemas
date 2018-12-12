@@ -82,7 +82,7 @@
 
                <div class="col s12 article-card">
                    <div class="col s4 offset-s7 article-card-left-name">
-                       <p class="article-name">Banyumas, Jawa Tengah</p>
+                       <p class="article-name">Bandung, Jawa Barat</p>
                          <h6 class="paragraf"></h6>
                          {{-- <p class="paragraf">Museum Geologi
                            <br> Museum ini didirikan pada tanggal 16 Mei 1928. Museum ini telah direnovasi dengan dana bantuan dari JICA.</p>

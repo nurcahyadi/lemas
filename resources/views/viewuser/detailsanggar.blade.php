@@ -79,11 +79,11 @@
 
            <div class="row article-row">
 
-               @foreach ($makanan as $index => $value)
+
                <div class="col s12 article-card">
                    <div class="col s4 offset-s7 article-card-left-name">
                        <p class="article-name">Bandung, Jawa Barat</p>
-                         <h6 class="paragraf">{{$value->nama_budaya}}</h6>
+                         <h6 class="paragraf"></h6>
                          {{-- <p class="paragraf">Museum Geologi
                            <br> Museum ini didirikan pada tanggal 16 Mei 1928. Museum ini telah direnovasi dengan dana bantuan dari JICA.</p>
                          <br> --}}
@@ -106,14 +106,15 @@
 <br>
            <div class="row">
 
-
+@foreach ($sanggar as $index => $value)
              <div class="col s4">
-               <img class="materialboxed" width="500" height="400" src="{{asset('storage/'.$value->foto_budaya)}}">
+               <img class="materialboxed" width="500" height="400" src="{{asset('storage/'.$value->photo)}}">
              </div>
 
              <div class="col s7" style="margin-left:50px;">
-               <h5>{{$value->nama_budaya}}</h5>
-               <p>{{$value->deskripsi_budaya}}</p>
+
+               <h5>{{$value->name}}</h5>
+               <p>{{$value->deskripsi}}</p>
              </div>
 @endforeach
            </div>

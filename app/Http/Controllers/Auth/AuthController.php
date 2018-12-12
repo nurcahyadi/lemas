@@ -23,7 +23,7 @@ class AuthController extends Controller
         $user = Socialite::driver($provider)->user();
         $authUser = $this->findOrCreateUser($user, $provider);
         Auth::login($authUser, true);
-        return redirect('/');
+        return redirect('/homeadminbudaya');
     }
     /**
      * If a user has registered before using social auth, return the user
@@ -34,7 +34,7 @@ class AuthController extends Controller
      */
     public function findOrCreateUser($user, $provider)
     {
-        $authUser = User::where('provider_id', $user->id)->first();
+        $authUser = User::where('email', $user->email)->first();
         if ($authUser) {
             return $authUser;
         }
@@ -45,6 +45,7 @@ class AuthController extends Controller
           $data->email = !empty($user->email)? $user->email : '';
           $data->provider = $provider;
           $data->provider_id = $user->id;
+          $data->password = '';
           $data->save();
 
 
